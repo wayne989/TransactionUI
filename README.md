@@ -1,5 +1,4 @@
 # TransactionUI
-Transaction Maintenance UI for Transaction data
 
 This is the front end part that designed to work with another project named Transaction, which is using Spring Boot
 Here's deployment step:
