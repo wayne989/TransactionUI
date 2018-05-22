@@ -1,0 +1,23 @@
+.w-auto {
+    width: auto;
+}
+.table-fixed {
+    table-layout: fixed;
+    overflow: hidden;
+    margin-left:auto; 
+    margin-right:auto;
+    text-align: center;
+    width:700px;
+}
+.align-left{
+    text-align: left;
+}
+.align-center{
+    text-align: center;
+}
+
+/* resize images */
+.small_img {
+    width: 30px;
+    height: auto;
+}

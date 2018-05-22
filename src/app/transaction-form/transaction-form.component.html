@@ -1,0 +1,95 @@
+<div align="center">
+    <p>
+      Transaction Detail (Add)
+    </p>
+  </div>
+  
+  <div *ngIf="transactionForm" align="center">
+    <form [formGroup]="transactionForm" novalidate>
+        <div class="show_window">
+          <div class="row margin-top-20">
+            <div class="col-sm-3 align-left">
+                <label for="transactionDate">Transaction Date:</label>              
+            </div>
+            <div class="col-sm-9 align-left">
+                <input type="date" class="form-control" id="transactionDate" 
+                name="transactionDate" formControlName="transactionDate" useValueAsDate>
+                <control-messages [control]="transactionForm.controls.transactionDate"></control-messages>
+            </div>
+          </div>
+          <div class="row margin-top-20">
+            <div class="col-sm-3 align-left">
+                <label for="requestor">Requestor:</label>
+            </div>
+            <div class="col-sm-9 align-left">
+              <select class="form-control" id="requestor" name="requestor" formControlName="requestor">
+                  <option value="Organization One">Organization One</option>
+                  <option value="Organization Two">Organization Two</option>
+                  <option value="Organization Three">Organization Three</option>
+                  <option value="Organization Four">Organization Four</option>
+                  <option value="Organization Five">Organization Five</option>
+                  <option value="Organization Six">Organization Six</option>
+                  <option value="Organization Seven">Organization Seven</option>
+                  <option value="Organization Eight">Organization Eight</option>
+                  <option value="Organization Nine">Organization Nine</option>
+                  <option value="Organization Ten">Organization Ten</option>
+                </select>
+                <control-messages [control]="transactionForm.controls.requestor"></control-messages>
+            </div>
+          </div>
+          <div *ngIf="getRequestorLogo()" class="row margin-top-20">
+            <div class="col-sm-3 align-left">
+              <label>Requestor Logo:</label>
+            </div>
+            <div class="col-sm-9 align-left">
+              <img [src]="getRequestorLogo()">
+            </div>
+          </div>    
+          <div class="row margin-top-20">
+            <div class="col-sm-3 align-left">
+                <label for="location">Location:</label>
+            </div>
+            <div class="col-sm-9 align-left">
+              <input type="text" class="form-control" id="location" placeholder="Location" name="location" formControlName="location" >
+              <control-messages [control]="transactionForm.controls.location"></control-messages>
+            </div>
+          </div>
+          <div class="row margin-top-20">
+            <div class="col-sm-3 align-left">
+                <label for="status">Status:</label>
+            </div>
+            <div class="col-sm-9 align-left">
+              <select class="form-control" id="status" name="status" formControlName="status">
+                  <option value="Open">Open</option>
+                  <option value="Completed">Completed</option>
+                  <option value="Rejected">Rejected</option>
+                  <option value="Pending">Pendiing</option>
+              </select>
+              <control-messages [control]="transactionForm.controls.status"></control-messages>
+            </div>
+          </div>
+          <div class="row margin-top-20">
+            <div class="col-sm-3 align-left">
+                <label for="transactionCode">TransactionCode:</label>
+            </div>
+            <div class="col-sm-9 align-left">
+              <input type="text" class="form-control" id="transactionCode" placeholder="Transaction Code" name="transactionCode" formControlName="transactionCode" >
+              <control-messages [control]="transactionForm.controls.transactionCode"></control-messages>
+            </div>
+          </div>
+          <div class="row margin-top-20 margin-bottom-20">
+            <div class="col-sm-3 align-left">
+                <label for="description">Description:</label>
+            </div>
+            <div class="col-sm-9 align-left">
+              <input type="text" class="form-control" id="description" placeholder="description" name="Description" formControlName="description" >
+              <control-messages [control]="transactionForm.controls.description"></control-messages>
+            </div>
+          </div>
+        </div>  
+        <div class="align_bottom">
+          <button [disabled]="transactionForm.pristine || transactionForm.invalid || submitted" class="button_ctl" (click)="onSubmit()">Submit</button>
+          <button class="button_ctl" (click)="onCancel()">Cancel</button>
+        </div>
+    </form>
+  </div>

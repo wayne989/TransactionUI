@@ -1,0 +1,42 @@
+.align-left{
+    text-align: left;
+}
+.align-right{
+    text-align: right;
+}
+.align-center{
+    text-align: center;
+}
+
+.margin-top-20{
+    margin-top:20px
+}
+.margin-bottom-20{
+    margin-bottom:20px
+}
+/* resize images */
+.small_img {
+    width: 30px;
+    height: auto;
+}
+
+.show_window{
+    width: 700px;
+    padding: 2px;
+    display: table;
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.button_ctl {
+    width: 100px;
+    border: 2px solid red;
+    padding: 2px;
+    border-radius: 25px;
+}
+
+.align_bottom{
+    padding: 10px
+}

@@ -1,0 +1,34 @@
+<div align="center">
+  <p>
+    List of Transactions
+  </p>
+</div>
+<!--Table-->
+<div align="center" >
+  <table class="table table-striped table-responsive table-fixed table-hover">
+      <thead>
+          <tr>
+              <th>View Detail</th>
+              <th>#Id</th>
+              <th>Transaction Date</th>
+              <th>Requestor</th>
+              <th>Location</th>
+              <th>Status</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let transactionItem of (transactionItem$ | async)">
+              <td scope="row"><input type="radio" name="radiogroup" (click)="viewDetail(transactionItem)"></td>
+              <td>{{transactionItem.id}}</td>
+              <td>{{transactionItem.transactionDate}}</td>
+              <td>{{transactionItem.requestor}}</td>
+              <td>{{transactionItem.location}}</td>
+              <td>{{transactionItem.status}}</td>
+          </tr>
+          <tr>
+            <td colspan="1" style="text-align:center;"><img (click)="addDetail()" class="small_img" src="/assets/images/add.ico"></td>
+            <td colspan="5">Please click + to add more</td>
+          </tr>
+      </tbody>
+  </table>
+</div>  

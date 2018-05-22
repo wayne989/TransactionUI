@@ -1,0 +1,78 @@
+<div align="center">
+  <p>
+    Transaction Detail (View)
+  </p>
+</div>
+
+<div *ngIf="transactionDetail" align="center">
+  <div class="show_window">
+    <div class="row margin-top-20">
+      <div class="col-sm-3 align-left">
+        ID:
+      </div>
+      <div class="col-sm-9 align-left">
+        {{transactionDetail.id}}
+      </div>
+    </div>
+    <div class="row margin-top-20">
+      <div class="col-sm-3 align-left">
+        Transaction Date:
+      </div>
+      <div class="col-sm-9 align-left">
+        {{transactionDetail.transactionDate}}
+      </div>
+    </div>
+    <div class="row margin-top-20">
+      <div class="col-sm-3 align-left">
+        Requestor:
+      </div>
+      <div class="col-sm-9 align-left">
+        {{transactionDetail.requestor}}
+      </div>
+    </div>
+    <div class="row margin-top-20">
+      <div class="col-sm-3 align-left">
+        Requestor Logo:
+      </div>
+      <div class="col-sm-9 align-left">
+        <img [src]="getRequestorLogo(transactionDetail.requestor)">
+      </div>
+    </div>    
+    <div class="row margin-top-20">
+      <div class="col-sm-3 align-left">
+        Location:
+      </div>
+      <div class="col-sm-9 align-left">
+        {{transactionDetail.location}}
+      </div>
+    </div>
+    <div class="row margin-top-20">
+      <div class="col-sm-3 align-left">
+        Status:
+      </div>
+      <div class="col-sm-9 align-left">
+        {{transactionDetail.status}}
+      </div>
+    </div>
+    <div class="row margin-top-20">
+      <div class="col-sm-3 align-left">
+        TransactionCode:
+      </div>
+      <div class="col-sm-9 align-left">
+        {{transactionDetail.transactionCode}}
+      </div>
+    </div>
+    <div class="row margin-top-20 margin-bottom-20">
+      <div class="col-sm-3 align-left">
+        Description:
+      </div>
+      <div class="col-sm-9 align-left">
+        {{transactionDetail.description}}
+      </div>
+    </div>
+  </div>  
+  <div class="align_bottom">
+    <button class="button_ctl" (click)="onDelete()">Delete</button>
+    <button class="button_ctl" (click)="onCancel()">Cancel</button>
+  </div>
+</div>
