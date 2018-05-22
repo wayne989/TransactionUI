@@ -1,7 +1,9 @@
 # TransactionUI
 
 This is the front end part that designed to work with another project named Transaction, which is using Spring Boot
-Here's deployment step:
+Please be aware this is written in Angular 5 and uses its libraries. you may encounter issue if your
+local using CLI from Angular 6. 
+Here's deployment step: 
 1. npm install
 2. ng build
 3. go to the dist/ directory 
